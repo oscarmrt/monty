@@ -2,16 +2,14 @@
 #define MONTY_H_
 
 #include <stdio.h>
-#include <sys/types.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <sys/types.h>
-#include <sys/wait.h>
-#include <sys/stat.h>
 #include <fcntl.h>
 #include <string.h>
 #include <errno.h>
 #include <stdbool.h>
+#include <sys/types.h>
+#include <sys/stat.h>
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -24,9 +22,9 @@
  */
 typedef struct stack_s
 {
-	int n;
-	struct stack_s *prev;
-	struct stack_s *next;
+        int n;
+        struct stack_s *prev;
+        struct stack_s *next;
 } stack_t;
 
 /**
@@ -61,11 +59,10 @@ typedef struct setup_s
 
 extern setup_t setup;
 
-int main(int ac, char **av);
 void ps(char *bf, stack_t **hd, unsigned int l);
-void f_s(stack_t *h);
 void op_f(stack_t **h, unsigned int l, char *cmd);
 void _push(stack_t **stack, unsigned int line_number);
+void f_s(stack_t *h);
 void _pall(stack_t **stack, unsigned int line_number);
 void _pint(stack_t **stack, unsigned int line_number);
 

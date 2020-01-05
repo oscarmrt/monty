@@ -1,5 +1,5 @@
 #include "monty.h"
-
+setup_t setup = {NULL, NULL, NULL};
 /**
  * main - Function
  * @ac: The argc received
@@ -13,8 +13,7 @@ int main(int ac, char **av)
 	ssize_t c;
 	size_t bufsz = 0;
 	unsigned int l = 0;
-	stack_t *hd = NULL;
-	setup_t setup = {NULL, NULL, NULL};
+	stack_t *top = NULL;
 
 if (ac != 2)
 {
@@ -29,7 +28,7 @@ setup.file = fopen(av[1], "r");
 			exit(EXIT_FAILURE);
 	}
 	for (; (c = getline(&setup.bf, &bufsz, setup.file) != EOF); l++)
-		ps(setup.bf, &hd, l);
-	f_s(hd);
+		ps(setup.bf, &top, l);
+	f_s(top);
 	exit(EXIT_SUCCESS);
 }

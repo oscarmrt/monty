@@ -20,8 +20,6 @@ void ps(char *bf, stack_t **hd, unsigned int l)
 		op_f(hd, l, str);
 }
 
-#include "monty.h"
-
 /**
  * f_s - free list function
  * @h: The pointer received
