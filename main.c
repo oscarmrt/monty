@@ -28,7 +28,7 @@ setup.file = fopen(av[1], "r");
 		dprintf(STDERR_FILENO, "Error: Can't open file %s\n", av[1]);
 			exit(EXIT_FAILURE);
 	}
-	for (; c = getline(&setup.bf, &bufsz, setup.file) != EOF; l++)
+	for (; (c = getline(&setup.bf, &bufsz, setup.file) != EOF); l++)
 		ps(setup.bf, &hd, l);
 	f_s(hd);
 	exit(EXIT_SUCCESS);
