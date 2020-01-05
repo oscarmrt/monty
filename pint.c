@@ -1,21 +1,21 @@
 #include "monty.h"
 
 /**
- * _pint - Function 
- * @h: The pointer
+ * _pint - Function
+ * @stack: The pointer
+ * @l: line number
  * Return: Nothing.
  */
 
-void _pint(stack_s *h)
+void _pint(stack_t *stack[], unsigned int l)
 {
-	int k;
+stack_t *tmp;
 
-if (h == NULL)
-
-
-	for (k = 0; h != '\0'; k++)
-	{
-	    h = h->next;
-	}
-    printf("%d\n", h->n);
+tmp = *stack;
+if (tmp == NULL)
+{
+	dprintf(STDERR_FILENO, "L%u: can't pint, stack empty\n", l);
+	exit(EXIT_FAILURE);
+}
+printf("%d\n", tmp->n);
 }
