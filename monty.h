@@ -65,6 +65,7 @@ int main(int ac, char **av);
 void ps(char *bf, stack_t **hd, unsigned int l);
 void f_s(stack_t *h);
 void op_f(stack_t **h, unsigned int l, char *cmd);
+void _push(stack_t **stack, unsigned int line_number);
 void _pall(stack_t **stack, unsigned int line_number);
 void _pint(stack_t **stack, unsigned int line_number);
 

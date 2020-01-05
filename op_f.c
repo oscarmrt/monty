@@ -17,9 +17,6 @@ void op_f(stack_t **h, unsigned int l, char *cmd)
 		{"push", _push},
 		{"pall", _pall},
 		{"pint", _pint},
-		{"pop", _pop},
-		{"add", _add},
-		{"nop", _nop},
 		{NULL, NULL}
 	};
 
