@@ -47,8 +47,7 @@ typedef struct instruction_s
  * struct setup_s - setup to the program
  * @file: the file
  * @line: the line
- * @stack: the stack
- * @queue: the queue
+ * @bf: the buffer
  *
  * Description: setup for the variables used
  */
@@ -57,10 +56,15 @@ typedef struct setup_s
 {
 	FILE *file;
 	char *line;
-	stack_t *stack;
-	_Bool queue;
+	char *bf;
 } setup_t;
 
 extern setup_t setup;
+
+int main(int ac, char **av);
+void ps(char *bf, stack_t **hd, unsigned int l);
+void f_s(stack_t *h);
+void op_f(stack_t **h, unsigned int l, char *cmd);
+void _pint(stack_t *stack[], unsigned int l);
 
 #endif
