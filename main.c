@@ -31,4 +31,5 @@ setup.file = fopen(av[1], "r");
 		ps(setup.bf, &top, l);
 	f_s(top);
 	exit(EXIT_SUCCESS);
+	return (0);
 }
