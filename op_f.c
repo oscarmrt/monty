@@ -21,6 +21,10 @@ void op_f(stack_t **h, unsigned int l, char *cmd)
 		{"swap", _swap},
 		{"add", _add},
 		{"nop", _nop},
+		{"sub", _sub},
+		{"div", _div},
+		{"mul", _mul},
+		{"mod", _mod},
 		{NULL, NULL}
 	};
 
