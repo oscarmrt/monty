@@ -12,7 +12,7 @@ int main(int ac, char **av)
 {
 	ssize_t c;
 	size_t bufsz = 0;
-	unsigned int l = 0;
+	unsigned int l = 1;
 	stack_t *top = NULL;
 
 if (ac != 2)
